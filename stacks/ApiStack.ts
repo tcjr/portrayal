@@ -11,4 +11,9 @@ export function ApiStack({ stack }: StackContext) {
   stack.addOutputs({
     ApiEndpoint: api.url,
   });
+
+  // TODO: Not really sure what to return here
+  return {
+    api,
+  };
 }

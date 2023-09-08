@@ -1,5 +1,7 @@
 import { SSTConfig } from 'sst';
 import { ApiStack } from './stacks/ApiStack';
+import { PhotoAdminFrontendStack } from './stacks/PhotoAdminFrontendStack';
+import { StorageStack } from './stacks/StorageStack';
 
 export default {
   config(_input) {
@@ -9,6 +11,6 @@ export default {
     };
   },
   stacks(app) {
-    app.stack(ApiStack);
+    app.stack(StorageStack).stack(ApiStack).stack(PhotoAdminFrontendStack);
   },
 } satisfies SSTConfig;
